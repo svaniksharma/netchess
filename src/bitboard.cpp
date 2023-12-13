@@ -32,7 +32,7 @@ PieceBoard BitBoard::getAll(const Piece piece) const {
 }
 
 void BitBoard::setAll(const Piece piece, const PieceBoard board) {
-  assert(piece >= 0 && piece < NUM_SQUARES);
+  assert(piece >= WHITE_PAWN && piece <= BLACK_KING);
   _piece_boards[piece] = board;
   _piece_boards[NONE] &= ~board;
 }
